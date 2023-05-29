@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Updating DOM with jQuery</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <h1>Initial Heading</h1>
+    <p id="message">Initial message</p>
+
+    <button id="updateBtn">Update DOM</button>
+
+    <script>
+        // Wait for the document to be ready
+        $(document).ready(function () {
+            // Handle the button click event
+            $('#updateBtn').click(function () {
+                // Update the heading
+                $('h1').text('Updated Heading');
+
+                // Update the paragraph text and style
+                $('#message').text('New message');
+                $('#message').css('color', 'blue');
+            });
+        });
+    </script>
+</body>
+
+</html>
